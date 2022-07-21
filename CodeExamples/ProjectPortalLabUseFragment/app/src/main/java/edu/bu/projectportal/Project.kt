@@ -1,13 +1,16 @@
 package edu.bu.projectportal
 
-data class Project(val id: Int, var title: String, var description: String){
+data class Project(val id: Int, var title: String, var description: String, var isFavorite: Boolean, var links: List<String>, var author: String, var keywords: List<String>){
     companion object {
         var project = Project(0, "Project Portal",
             "Project portal is a simple Android application to  " +
                     "provide a centralized portal for all projects." +
                     "This app can help facilitate the information and " +
                     "sharing and collaboration among students and faculty " +
-                    "across different programs within the college.")
+                    "across different programs within the college.",
+            true, listOf("http://www.youtube.com", "http://www.linkedin.com", "http://www.github.com"),
+            "Hannah Fitzsimmons", listOf("project", "portal", "students", "faculty", "college")
+        )
     }
 
 //        var projects = listOf(
