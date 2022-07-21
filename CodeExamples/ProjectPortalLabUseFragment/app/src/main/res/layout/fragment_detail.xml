@@ -24,9 +24,15 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="44dp"
         android:src="@mipmap/ic_launcher"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="116dp"
+        app:layout_constraintBottom_toTopOf="@+id/author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/projTitle"
         tools:src="@tools:sample/avatars" />
 
     <TextView
@@ -55,11 +61,122 @@
         android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
         android:layout_marginTop="44dp"
+        android:layout_marginEnd="185dp"
         android:text="Author"
         app:layout_constraintBottom_toTopOf="@id/projDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="184dp" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/favorited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="613dp"
+        android:src="@android:drawable/btn_star_big_on"
+        app:layout_constraintBottom_toTopOf="@+id/editProj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/projTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/youtube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="250dp"
+        android:onClick="http://www.youtube.com"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/projDesc"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <ImageButton
+        android:id="@+id/githubLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="250dp"
+        android:onClick="http://www.github.com"
+        android:src="?attr/actionModeShareDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toEndOf="@+id/youtube"
+        app:layout_constraintTop_toBottomOf="@+id/projDesc"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/LinkedInLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="250dp"
+        android:onClick="http://www.linkedin.com/"
+        android:src="@android:drawable/ic_menu_set_as"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toEndOf="@+id/githubLink"
+        app:layout_constraintTop_toBottomOf="@+id/projDesc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="214dp"
+        android:text="Youtube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="214dp"
+        android:text="GitHub"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/githubLink"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="214dp"
+        android:text="LinkedIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/LinkedInLink" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

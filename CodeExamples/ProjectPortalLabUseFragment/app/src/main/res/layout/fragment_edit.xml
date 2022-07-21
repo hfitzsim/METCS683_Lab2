@@ -64,14 +64,30 @@
         app:layout_constraintTop_toTopOf="@+id/submit"
         app:layout_constraintBottom_toBottomOf="@+id/submit" />
 
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="185dp"
+        android:text="Author"
+        app:layout_constraintBottom_toTopOf="@id/projDescEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/isFavorite"
         android:layout_width="239dp"
         android:layout_height="51dp"
+        android:layout_marginStart="88dp"
         android:text="Favorite"
         app:layout_constraintEnd_toEndOf="@id/projDescEdit"
-        app:layout_constraintTop_toBottomOf="@id/projDescEdit"
-        tools:layout_editor_absoluteY="439dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/projDescEdit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
